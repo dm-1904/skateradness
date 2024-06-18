@@ -85,6 +85,8 @@ img { max-width: 100%; }
 	padding: 10px;
 	font-size: 20px;
 	border-radius: 5px;
+	display: block;
+	text-align: center;
 }
 
 
@@ -130,4 +132,31 @@ img { max-width: 100%; }
 .learn-more-alt img {
 	grid-column: 2/3;
 	grid-row: 1/2;
+}
+
+.skate-gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	row-gap: 20px;
+	column-gap: 20px;
+}
+
+.skate-gallery h2:before, .skate-gallery h2:after {
+	display: block;
+	content: '';
+	height: 10px;
+	background: linear-gradient(to left, #333, transparent);
+}
+
+.skate-gallery h2:after {
+	background: linear-gradient(to right, #333, transparent);
+}
+
+.skate-gallery h2 {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	grid-column: 1/-1;
+	column-gap: 20px;
+	row-gap: 20px;
+	align-items: center;
 }
